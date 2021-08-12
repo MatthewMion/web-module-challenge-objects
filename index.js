@@ -59,6 +59,8 @@ const burger = {
   category: "Lunch", 
   //discount method
   discount: function(occupation){
+
+    let newPrice;
     if(occupation === 'student' || occupation === 'teacher'){
       newPrice = this.price * .75
     }else {
@@ -112,11 +114,24 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview( array value1, value2, value3){
+// function addReview( array, value1, value2, value3, value4){
+//   let newObject = {
+//     name : value1,
+//     rating : value2,
+//     feedback : value3,
+//     review :
+//   }
+//   array.push(newObject);
+//   console.log(array)
+//   return array;
+// }
+
+function addReview( array, name, rating, feedback, review){
   let newObject = {
-    name : value1,
-    rating : value2,
-    review : value3,
+    name,
+    rating,
+    feedback,
+    review
   }
   array.push(newObject);
   console.log(array)

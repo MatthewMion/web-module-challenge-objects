@@ -112,7 +112,7 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview( array, value1, value2, value3){
+function addReview( array value1, value2, value3){
   let newObject = {
     name : value1,
     rating : value2,

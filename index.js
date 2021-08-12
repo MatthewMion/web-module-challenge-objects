@@ -15,8 +15,12 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return {
+      name: name,
+      price: price,
+      category: category,
+    }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,7 +32,12 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+let Burger = createMenuItem('burger', 10, 'entree');
+let Tenders = createMenuItem('tenders', 5, 'appetizer');
+let Fries = createMenuItem('fries', 3, 'side');
+console.log(Burger);
+console.log(Tenders);
+console.log(Fries);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -43,12 +52,23 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+
 const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
+  //discount method
+  discount: function(occupation){
+    if(occupation === 'student' || occupation === 'teacher'){
+      newPrice = this.price * .75
+    }else {
+      newPrice = this.price * .9
+    }
+    return newPrice;
+  }
   
 }
+
 
 
 
@@ -68,7 +88,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5].feedback);
 
 
 
@@ -92,8 +112,15 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview( array, value1, value2, value3){
+  let newObject = {
+    name : value1,
+    rating : value2,
+    review : value3,
+  }
+  array.push(newObject);
+  console.log(array)
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
